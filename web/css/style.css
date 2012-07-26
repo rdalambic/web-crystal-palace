@@ -1,0 +1,357 @@
+/*
+design.css
+----------		Par Ben
+Cr�� le 3 mars 2010
+
+Description: Feuille de style g�n�rale du site.
+*/ 
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------->>> CSS DES BALISES GENERIQUES <<<---------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+body
+{
+	margin: 0;
+        padding: 0;
+        background-image: url("img/background.png");
+        background-position: top;
+        background-repeat: repeat-x;
+	background-attachment: fixed;
+        background-color: /*#6666ff*/#ffff00;
+	font-family: Verdana, Helvetica, sans-serif;
+        font-size: 12px;
+        line-height: 135%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+strong
+{
+   color: #B3B3B3;
+   text-align: center;
+   font-family: Arial, "Arial Black", "Times New Roman", Times, serif;
+   background-image: url("img/black.gif");       
+   background-color: #f8f8f8;
+}
+
+td
+{
+	border: 1px solid black;
+}
+th
+{
+	border: 2px solid black;
+}
+table
+{
+	border: 3px solid black;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+a img
+{
+	border: none;
+}
+
+/*input[type=button], input[type=submit], input[type=text], input[type=password], textarea, select { border: 1px solid #7B7B7B; }
+input[type=button], input[type=submit]
+{
+	color: #222;
+	background-color: #FFF;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+        cursor: pointer;
+}
+input[type=button]:hover, input[type=submit]:hover { border:1px solid #9e9e9e; }
+input[type=button]:focus, input[type=submit]:focus, input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus { border: 1px solid #000; }
+input[disabled] { background-color:#DDD; cursor:default; }
+
+label
+{
+	display: inline-block;
+	width: 215px;
+}*/
+
+/* ------------- Forms --------------------- */
+div.form-container { margin: 10px; padding: 5px; background-color: #FFF; border: #EEE 1px solid; }
+
+p.legend { margin-bottom: 1em; }
+p.legend em { color: #C00; font-style: normal; }
+
+div.errors { margin: 0 0 10px 0; padding: 5px 10px; border: #FC6 1px solid; background-color: #FFC; }
+div.errors p { margin: 0; }
+div.errors p em { color: #C00; font-style: normal; font-weight: bold; }
+
+div.form-container form p { margin: 0; }
+div.form-container form p.note { margin-left: 170px; font-size: 90%; color: #333; }
+div.form-container form fieldset { margin: 10px 0; padding: 10px; border: #DDD 1px solid; }
+div.form-container form legend { font-weight: bold; color: #666; }
+div.form-container form fieldset div { padding: 0.25em 0; }
+div.form-container label { margin-right: 10px; padding-right: 10px; width: 150px; display: block; float: left; text-align: right; position: relative; }
+div.form-container label.error, 
+div.form-container span.error { color: #C00; }
+div.form-container label em { position: absolute; right: 0; font-size: 120%; font-style: normal; color: #C00; }
+div.form-container input.error { border-color: #C00; background-color: #FEF; }
+div.form-container input:focus,
+div.form-container input.error:focus, 
+div.form-container textarea:focus {	background-color: #FFC; border-color: #FC6; }
+div.form-container div.controlset label, 
+div.form-container div.controlset input { display: inline; float: none; }
+div.form-container div.controlset label.controlset { display: block; float: left; }
+div.form-container div.controlset div { margin-left: 170px; }
+div.form-container div.buttonrow { margin-left: 180px; }
+/*---------------- END FORMS ------------------*/
+
+h3
+{
+    display: block;
+    font-size: 17px;
+    font-weight: normal;
+    height: 51px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0 0 0 85px;
+    text-align: left;
+}
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* ----------------------->>> FIN DES DEFINITIONS DU CSS DES BALISES GENERIQUES <<<-------------------------------- */
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+/* Corp Principale */
+#content
+{
+    width: 978px;
+    margin: 0 auto 15px;
+    /*margin-top: 25px;*/
+    background-color: #6666ff;
+    border-style: none solid solid;
+    border-color: black;
+    border-width: medium 1px 1px;
+    position: relative;
+    color: #000;
+}
+
+
+
+/* Header */
+#header
+{
+   height: 316px;
+   width: 100%;
+   position: relative;
+   top: 0;
+   background: url("http://placehold.it/978x193") no-repeat scroll left top transparent;
+}
+
+#logo
+{
+    z-index: -1;
+    width: 155px;
+    height: 192px;
+}
+
+#speedbar
+{
+    display: block;
+    height: 37px;
+    position: absolute;
+    text-align: center;
+    top: 150px;
+    width: 978px;
+    z-index: 10000;
+}
+
+#speedbar li
+{
+    display: inline;
+    list-style: none outside none;
+}
+
+#speedbar a
+{
+    display: inline-block;
+    font-weight: bold;
+    height: auto;
+    margin: 0 1px;
+    padding: 14px 6px;
+    width: auto;
+    text-decoration: none;
+}
+
+#corp
+{
+    width: 720px;
+    margin-left: 180px;
+    background-color: red;
+}
+
+#footer
+{
+    height: 60px;
+    display: block;
+    font-style: normal;
+    margin: 15px 0 0;
+    padding: 0 0 10px;
+    text-align: center;
+    width: 978px;
+    color: #949494;
+}
+
+#footer a
+{
+    text-decoration: none;
+    color: #949494;
+}
+
+#footer a:hover
+{
+    text-decoration: underline;
+}
+
+#flinks
+{
+    line-height: 16px;
+    margin: 15px 0 0;
+    padding: 0;
+}
+
+#copyline
+{
+    clear: both;
+    margin: 0;
+    padding: 1px 0 0;
+}
+
+.clearer
+{
+    clear: both;
+}
+
+#film-box
+{
+    display: inline;
+    float: left;
+    height: 235px;
+    width: 660px;
+    margin: 0 0 5px 5px;
+    position: relative;
+    text-align: right;    
+}
+
+.film-affiche
+{
+    display: inline;
+    float: left;
+    font-size: 10px;
+    height: auto;
+    margin-left: 14px;
+    margin-top: 30px;
+    text-align: center;
+    width: 115px;
+}
+
+#prog-link
+{
+    font-size: 11px;
+    font-weight: bold;
+    left: 543px;
+    padding: 0;
+    position: absolute;
+    text-align: right;
+    top: 13px;
+    width: 107px;
+}
+
+#news
+{
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    display: inline;
+    float: left;
+    font-size: 12px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    width: 658px;
+}
+
+#news h1
+{
+    background: url("http://placehold.it/659x57&text=Actualités") no-repeat scroll left top #FFF;
+    color: #FFF;
+    display: block;
+    font-size: 11px;
+    height: 57px;
+    left: -1px;
+    line-height: 57px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: right;
+    top: -1px;
+    width: 660px;
+}
+
+#adtop
+{
+    clear: both;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    text-align: center;
+}
+
+#rightbar
+{
+    display: inline;
+    float: right;
+    height: auto;
+    margin: 0 5px 0 0;
+    overflow: auto;
+    padding-bottom: 15px;
+    width: 304px;
+}
+
+.programme
+{
+    background: url("http://placehold.it/660x51") no-repeat scroll left top transparent;
+}
+
+#film-list-box
+{
+    margin: 0;
+    padding: 0;
+}
+
+#film-list
+{
+    margin: 0;
+    padding: 12px;
+}
+
+.film-prog-box
+{
+    display: inline;
+    float: left;
+    height: 180px;
+    width: 316px;
+}
+
+.infos-box-film
+{
+    padding-left: 115px;
+}
+
+.infos-box-film h4
+{
+    font-size: 14px;
+    font-weight: normal;
+    height: 60px;
+    vertical-align: top;
+}

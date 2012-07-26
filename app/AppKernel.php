@@ -17,12 +17,19 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
+            new Cp\Bundle\IndexBundle\CpIndexBundle(),
+            new Cp\Bundle\CoreBundle\CpCoreBundle(),
+            new Cp\Bundle\FilmBundle\CpFilmBundle(),
+            new Cp\Bundle\ProgrammeBundle\CpProgrammeBundle(),
+            new Cp\Bundle\ActuBundle\CpActuBundle(),
+            new Cp\Bundle\AdminBundle\CpAdminBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {            
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
         }
 
         return $bundles;

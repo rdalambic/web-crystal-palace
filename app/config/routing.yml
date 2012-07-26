@@ -1,3 +1,27 @@
+CpAdminBundle:
+    resource: "@CpAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CpActuBundle:
+    resource: "@CpActuBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CpProgrammeBundle:
+    resource: "@CpProgrammeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CpFilmBundle:
+    resource: "@CpFilmBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CpCoreBundle:
+    resource: "@CpCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+CpIndexBundle:
+    resource: "@CpIndexBundle/Resources/config/routing.yml"
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
