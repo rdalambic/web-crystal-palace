@@ -8,11 +8,11 @@ CpActuBundle:
 
 CpProgrammeBundle:
     resource: "@CpProgrammeBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /programme
 
 CpFilmBundle:
     resource: "@CpFilmBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /film
 
 CpCoreBundle:
     resource: "@CpCoreBundle/Resources/config/routing.yml"

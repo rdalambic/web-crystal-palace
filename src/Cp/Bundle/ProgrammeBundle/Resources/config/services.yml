@@ -5,3 +5,5 @@ services:
 #    cp_programme.example:
 #        class: %cp_programme.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+    programme.wed_date:
+        class: Cp\Bundle\ProgrammeBundle\Service\DateService

@@ -2,20 +2,25 @@
 
 {% block titrepage %}Accueil{% endblock %}
 
+{% block javascript_head %}
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('/js/rd_ui_class.js') }}"></script>
+{% endblock %}
+
 {% block content %}
 <div id="film-box">
     <div id="film-content">
         <div id="film-caroussel">
-            <foreach var="$films" as="f">
+            {% for f in programme.getFilms() %}
                 <span class="film-affiche">
-                    <a href="#" title="{f[titre]}"><img alt="{f[titre]}" src="http://placehold.it/110x145" /></a>
+                    <a href="{{ path('film_fiche', { id: f.id }) }}" title="{{ f.titre }}"><img class="affiche_small" alt="{{ f.titre }}" src="{{ f.affiche }}" /></a>
                     <div class="infos-film">INFOS</div>
                 </span>
-            </foreach>
+            {% endfor %}
         </div>
     </div>
     <div id="prog-link">
-        <a href="programme.html">Films à l'affiche</a>
+        <a href="{{ path('programme_cette_semaine') }}">Films à l'affiche</a>
     </div>
 </div>
 

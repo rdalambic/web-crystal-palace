@@ -30,7 +30,7 @@
                     <div id="speedbar">
                         <ul>
                             <li><a href="{{ path('homepage') }}">Accueil</a></li>
-                            <li><a href="programme.html">Programme</a></li>
+                            <li><a href="{{ path('programme_cette_semaine') }}">Programme</a></li>
                             <li><a href="horaires.html">Horaires</a></li>
                             <li><a href="tarifs.html">Tarifs</a></li>
                         </ul>
@@ -58,9 +58,9 @@
                 <div class="clearer"></div>
                 
                 <div id="footer">
-                    <div id="flinks"><a href="contact.html">Contact</a> - <a href="acces.html">Plan d'accès</a> - <if cond="isset($_SESSION[membre_id])"><a href="admin-1.html">Administration</a><else/><a href="connexion.html">Connexion</a></if> - <a href="mentions.html">Mentions légales</a> - <a href="https://rdalambic.uservoice.com">Aide</a></div>
+                    <div id="flinks"><a href="contact.html">Contact</a> - <a href="acces.html">Plan d'accès</a> - {% if is_granted('IS_AUTHENTICATED_FULLY') %}<a href="admin-1.html">Administration</a>{% else %}<a href="{{ path('user_login') }}">Connexion</a>{% endif %} - <a href="mentions.html">Mentions légales</a> - <a href="https://rdalambic.uservoice.com">Aide</a></div>
                     <div id="copyline">
-                        <p>Copyright &copy; 2012 <a href="http://www.crystalpalace.fr">Crystal Palace</a> &amp; <a href="http://www.rdalambic.com">RD Alambic</a>. Tous droits réservés.</p>
+                        <p>Copyright &copy; 2012 <a href="{{ url('homepage') }}">Crystal Palace</a> &amp; <a href="http://www.rdalambic.com">RD Alambic</a>. Tous droits réservés.</p>
                     </div>
                 </div>
             </div>

@@ -8,8 +8,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     
-    public function indexAction($name)
+    public function hebdoAction()
     {
-        return $this->render('CpProgrammeBundle:Default:index.html.twig', array('name' => $name));
+        $dateService = $this->get('programme.wed_date');
+        $date = $this->get('core.sql_date')->frUs($dateService->getWedDate());
+        $programme = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->findOneByDate(new \DateTime($date));
+        
+        
+        
+        return $this->render('CpProgrammeBundle:Default:hebdo.twig.tpl', array(
+            'programme' => $programme,
+            'dateDebut' => $dateService->getWedDate(),
+            'dateFin'   => $dateService->getLastDate(),            
+        ));
     }
 }

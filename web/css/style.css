@@ -34,8 +34,27 @@ strong
    color: #B3B3B3;
    text-align: center;
    font-family: Arial, "Arial Black", "Times New Roman", Times, serif;
-   background-image: url("img/black.gif");       
-   background-color: #f8f8f8;
+  /* background-image: url("img/black.gif");       
+   background-color: #f8f8f8;*/
+}
+
+.fiche-film
+{
+    padding: 10px;
+}
+
+.left-fiche
+{
+    float: left;
+    width: 155px;
+    height: 380px;
+    margin-right: 5px;
+}
+
+.fiche-film strong
+{
+    font-weight: bold;
+    color: #6666ff;
 }
 
 td
@@ -129,7 +148,7 @@ h3
     width: 978px;
     margin: 0 auto 15px;
     /*margin-top: 25px;*/
-    background-color: #6666ff;
+    background-color: #fff;
     border-style: none solid solid;
     border-color: black;
     border-width: medium 1px 1px;
@@ -354,4 +373,10 @@ h3
     font-weight: normal;
     height: 60px;
     vertical-align: top;
+}
+
+.affiche_small
+{
+    width: 110px;
+    height: 145px;
 }

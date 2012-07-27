@@ -10,6 +10,12 @@ class IndexController extends Controller
     
     public function homepageAction()
     {
-        return $this->render('CpIndexBundle:Index:index.twig.tpl');
+        $wed = $this->get('programme.wed_date')->getWedDate();
+        $date = $this->get('core.sql_date')->frUs($wed);
+        
+        $programme = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->findOneByDate(new \DateTime($date));
+        return $this->render('CpIndexBundle:Index:index.twig.tpl', array(
+            'programme' => $programme,
+        ));
     }
 }

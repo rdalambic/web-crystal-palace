@@ -274,4 +274,19 @@ class Film
     {
         return $this->affiche;
     }
+    
+    public function getDuree()
+    {
+        if(empty($this->duree_h))
+        {
+            $this->duree_h = 0;
+        }
+        
+        if(empty($this->duree_m))
+        {
+            $this->duree_m = '00';
+        }
+        
+        return $this->duree_h.'h'.$this->duree_m;
+    }
 }

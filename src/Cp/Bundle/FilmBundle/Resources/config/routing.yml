@@ -1,3 +1,5 @@
-CpFilmBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: CpFilmBundle:Default:index }
+film_fiche:
+    pattern:  /{id}
+    defaults: { _controller: CpFilmBundle:Default:fiche}
+    requirements:
+      id: \d+

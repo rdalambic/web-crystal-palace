@@ -1,3 +1,6 @@
-CpAdminBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: CpAdminBundle:Default:index }
+user_login:
+    pattern:  /login
+    defaults: { _controller: CpAdminBundle:User:login }
+    
+login_check:
+    pattern: /admin/check
