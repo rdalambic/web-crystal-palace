@@ -27,14 +27,16 @@
 <div id="news">
     <h1>Acutalités</h1>
     <div id="news-container">
-        <foreach var="$news" as="n">
-            <div class="news-box" id="n{n[id]}">
-                <h2 class="news-titre">{n[titre]}</h2>
+        {% for a in actus %}
+            <div class="news-box" id="n{{ a.id }}">
+                <h2 class="news-titre">{{ a.titre }}</h2>
                 <div class="news-contenu">
-                    {n[contenu]}
+                    {{ a.contenu }}
                 </div>
             </div>
-        </foreach>
+            {% else %}
+            <p>Aucune actu en ce moment.</p>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

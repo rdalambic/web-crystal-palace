@@ -1,0 +1,7 @@
+parameters:
+#    cp_contact.example.class: Cp\Bundle\ContactBundle\Example
+
+services:
+#    cp_contact.example:
+#        class: %cp_contact.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
