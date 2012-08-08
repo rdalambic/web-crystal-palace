@@ -1,3 +1,7 @@
+CpSeanceBundle:
+    resource: "@CpSeanceBundle/Resources/config/routing.yml"
+    prefix:   /
+
 CpContactBundle:
     resource: "@CpContactBundle/Resources/config/routing.yml"
     prefix:   /

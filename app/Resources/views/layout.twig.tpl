@@ -26,7 +26,7 @@
             <div id="content">
                 
                 <div id="header">
-                    <div id="logo"><a href="/"><img src="http://static.rdalambic.com/rdweb/logo_cinema.jpg" alt="Cinéma Crystal Palace" /></a></div>
+                    <div id="logo"><a href="{{ path('homepage') }}"><img src="{{ asset('/img/logo.jpg') }}" alt="Cinéma Crystal Palace" /></a></div>
                     <div id="speedbar">
                         <ul>
                             <li><a href="{{ path('homepage') }}">Accueil</a></li>
@@ -58,7 +58,7 @@
                 <div class="clearer"></div>
                 
                 <div id="footer">
-                    <div id="flinks"><a href="contact.html">Contact</a> - <a href="acces.html">Plan d'accès</a> - {% if is_granted('IS_AUTHENTICATED_FULLY') %}<a href="admin-1.html">Administration</a>{% else %}<a href="{{ path('user_login') }}">Connexion</a>{% endif %} - <a href="mentions.html">Mentions légales</a> - <a href="https://rdalambic.uservoice.com">Aide</a></div>
+                    <div id="flinks"><a href="{{ path('contact_page') }}">Contact</a> - <a href="acces.html">Plan d'accès</a> - {% if is_granted('IS_AUTHENTICATED_FULLY') %}<a href="{{ path('admin_homepage') }}">Administration</a>{% else %}<a href="{{ path('user_login') }}">Connexion</a>{% endif %} - <a href="mentions.html">Mentions légales</a> - <a href="https://rdalambic.uservoice.com">Aide</a></div>
                     <div id="copyline">
                         <p>Copyright &copy; 2012 <a href="{{ url('homepage') }}">Crystal Palace</a> &amp; <a href="http://www.rdalambic.com">RD Alambic</a>. Tous droits réservés.</p>
                     </div>

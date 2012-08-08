@@ -13,7 +13,7 @@ body
 {
 	margin: 0;
         padding: 0;
-        background-image: url("img/background.png");
+        background-image: url("../img/back.png");
         background-position: top;
         background-repeat: repeat-x;
 	background-attachment: fixed;
@@ -165,7 +165,7 @@ h3
    width: 100%;
    position: relative;
    top: 0;
-   background: url("http://placehold.it/978x193") no-repeat scroll left top transparent;
+   background: url("../img/banner.png") no-repeat scroll left top transparent;
 }
 
 #logo
@@ -181,9 +181,10 @@ h3
     height: 37px;
     position: absolute;
     text-align: center;
-    top: 150px;
+    top: 156px;
     width: 978px;
     z-index: 10000;
+    background: url("../img/linkbar.png") repeat-x bottom;
 }
 
 #speedbar li

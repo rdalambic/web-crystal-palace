@@ -4,3 +4,15 @@ user_login:
     
 login_check:
     pattern: /admin/check
+    
+admin_homepage:
+    pattern: /admin
+    defaults: { _controller: CpAdminBundle:Admin:index }
+
+gerer_film:
+    pattern: /admin/films
+    defaults: { _controller: CpAdminBundle:Film:gerer }
+    
+ajouter_film:
+    pattern: /admin/ajouter-film
+    defaults: { _controller: CpAdminBundle:Film:ajouter }
