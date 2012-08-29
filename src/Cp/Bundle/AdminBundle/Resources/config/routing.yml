@@ -16,3 +16,9 @@ gerer_film:
 ajouter_film:
     pattern: /admin/ajouter-film
     defaults: { _controller: CpAdminBundle:Film:ajouter }
+
+editer_film:
+    pattern: /admin/editer-film-{id}
+    defaults: { _controller: CpAdminBundle:Film:editer }
+    requirements:
+      id: \d+

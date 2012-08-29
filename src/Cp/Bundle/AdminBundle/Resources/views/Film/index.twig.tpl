@@ -27,7 +27,7 @@
         <tr>
             <td>{{ f.id }}</td>
             <td>{{ f.titre }}</td>
-            <td>Editer - Supprimer</td>
+            <td><a href="{{ path('editer_film', { id = f.id }) }}">Editer</a> - Supprimer</td>
         </tr>
         {% endfor %}
     </tbody>

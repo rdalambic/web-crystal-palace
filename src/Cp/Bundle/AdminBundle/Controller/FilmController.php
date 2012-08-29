@@ -44,6 +44,25 @@ class FilmController extends Controller {
             'form' => $form->createView(),
         ));        
     }
+    
+    /**
+     * @Secure(roles="IS_AUTHENTICATED_REMEMBERED")
+     */
+    public function editerAction($id)
+    {
+        $film = $this->getDoctrine()->getEntityManager()->getRepository('CpFilmBundle:Film')->find($id);
+        
+        if(!$film)
+        {
+            $this->createNotFoundException("Ce film n'existe pas.");
+        }
+        
+        $form = $this->createForm(new FilmType(), $film);
+        
+        return $this->render('CpAdminBundle:Film:edit.twig.tpl', array(
+            'form' => $form->createView(),
+        ));
+    }
 }
 
 ?>
