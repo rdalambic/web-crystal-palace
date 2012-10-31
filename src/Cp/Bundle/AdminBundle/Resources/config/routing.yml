@@ -22,3 +22,29 @@ editer_film:
     defaults: { _controller: CpAdminBundle:Film:editer }
     requirements:
       id: \d+
+
+supprimer_film:
+    pattern: /admin/supprimer-film-{id}
+    defaults: { _controller: CpAdminBundle:Film:supprimer }
+    requirements:
+      id: \d+
+
+gerer_programme:
+    pattern: /admin/programmes
+    defaults: { _controller: CpAdminBundle:Programme:gerer }
+
+ajouter_programme:
+    pattern: /admin/ajouter-programme
+    defaults: { _controller: CpAdminBundle:Programme:ajouter }
+    
+editer_programme:
+    pattern: /admin/editer-programme-{id}
+    defaults: { _controller: CpAdminBundle:Programme:editer }
+    requirements:
+      id: \d+
+      
+supprimer_programme:
+    pattern: /admin/supprimer-programme-{id}
+    defaults: { _controller: CpAdminBundle:Programme:supprimer }
+    requirements:
+      id: \d+

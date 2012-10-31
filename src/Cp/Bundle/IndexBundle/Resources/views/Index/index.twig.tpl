@@ -4,10 +4,12 @@
 
 {% block javascript_head %}
     {{ parent() }}
-    <script type="text/javascript" src="{{ asset('/js/rd_ui_class.js') }}"></script>
+<script type="text/javascript" src="{{ asset('/js/rd_ui_class.js') }}"></script>
 {% endblock %}
 
 {% block content %}
+
+{% if programme %}
 <div id="film-box">
     <div id="film-content">
         <div id="film-caroussel">
@@ -17,26 +19,29 @@
                     <div class="infos-film">INFOS</div>
                 </span>
             {% endfor %}
+            </div>
+        </div>
+        <div id="prog-link">
+            <a href="{{ path('programme_cette_semaine') }}">Films à l'affiche</a>
         </div>
     </div>
-    <div id="prog-link">
-        <a href="{{ path('programme_cette_semaine') }}">Films à l'affiche</a>
-    </div>
-</div>
+{% else %}
+<p>Désolé, aucun programme pour le moment...</p>
+{% endif %}
 
-<div id="news">
-    <h1>Acutalités</h1>
-    <div id="news-container">
+    <div id="news">
+        <!--<h1>Acutalités</h1>-->
+        <div id="news-container">
         {% for a in actus %}
-            <div class="news-box" id="n{{ a.id }}">
-                <h2 class="news-titre">{{ a.titre }}</h2>
-                <div class="news-contenu">
+                <div class="news-box" id="n{{ a.id }}">
+                    <h2 class="news-titre">{{ a.titre }}</h2>
+                    <div class="news-contenu">
                     {{ a.contenu }}
+                        </div>
+                    </div>
+            {% else %}
+                    <p>Aucune actu en ce moment.</p>
+        {% endfor %}
                 </div>
             </div>
-            {% else %}
-            <p>Aucune actu en ce moment.</p>
-        {% endfor %}
-    </div>
-</div>
 {% endblock %}

@@ -12,7 +12,13 @@ class DefaultController extends Controller
     {
         $dateService = $this->get('programme.wed_date');
         $date = $this->get('core.sql_date')->frUs($dateService->getWedDate());
+        
         $programme = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->findOneByDate(new \DateTime($date));
+        
+        if(!$programme)
+        {
+            return $this->redirect($this->generateUrl('homepage'));
+        }
         
         
         

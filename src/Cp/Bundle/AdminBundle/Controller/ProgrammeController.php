@@ -9,27 +9,29 @@ namespace Cp\Bundle\AdminBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\SecurityContext;
 use JMS\SecurityExtraBundle\Annotation\Secure;
-use Cp\Bundle\FilmBundle\Entity\Film;
-use Cp\Bundle\AdminBundle\Form\Type\FilmType;
 use Symfony\Component\HttpFoundation\Request;
+use Cp\Bundle\ProgrammeBundle\Entity\Programme;
+use Symfony\Component\HttpFoundation\Response;
+use Cp\Bundle\AdminBundle\Form\Type\ProgrammeType;
+
 /**
- * Description of FilmController
+ * Description of ProgrammeControler
  *
  * @author Benjamin
  */
-class FilmController extends Controller {
+class ProgrammeController extends Controller {
     
     /**
      * @Secure(roles="IS_AUTHENTICATED_REMEMBERED")
      */
     public function gererAction()
     {
-        $films = $this->getDoctrine()->getEntityManager()->getRepository('CpFilmBundle:Film')->findBy(array(), array(
+        $progs = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->findBy(array(), array(
             'id' => 'desc',
-            ));
+        ));
         
-        return $this->render('CpAdminBundle:Film:index.twig.tpl', array(
-            'films' => $films,
+        return $this->render('CpAdminBundle:Programme:index.twig.tpl', array(
+            'progs' => $progs,
         ));
     }
     
@@ -38,8 +40,9 @@ class FilmController extends Controller {
      */
     public function ajouterAction(Request $request)
     {
-        $film = new Film();        
-        $form = $this->createForm(new FilmType(), $film);
+        $programme = new Programme();
+        
+        $form = $this->createForm(new ProgrammeType(), $programme, array());
         
         if($request->getMethod() == 'POST')
         {
@@ -48,48 +51,46 @@ class FilmController extends Controller {
             
             if($form->isValid())
             {
-                $form->setData($film);
-                $em->persist($film);
+                $form->setData($programme);
+                $em->persist($programme);
                 $em->flush();
                 
-                return $this->redirect($this->generateUrl('gerer_film'));
-            }
+                return $this->redirect($this->generateUrl('gerer_programme'));
+            }            
         }
         
-        return $this->render('CpAdminBundle:Film:add.twig.tpl', array(
+        return $this->render('CpAdminBundle:Programme:add.twig.tpl', array(
             'form' => $form->createView(),
-        ));        
+        ));
     }
     
-    /**
-     * @Secure(roles="IS_AUTHENTICATED_REMEMBERED")
-     */
     public function editerAction($id, Request $request)
     {
-        $film = $this->getDoctrine()->getEntityManager()->getRepository('CpFilmBundle:Film')->find($id);        
+        $programme = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->find($id);
         
-       if(!$film)
+        if(!$programme)
         {
-            $this->createNotFoundException("Ce film n'existe pas.");
+            $this->createNotFoundException();
         }
         
-        $form = $this->createForm(new FilmType(), $film);
+        $form = $this->createForm(new ProgrammeType(), $programme);
         
         if($request->getMethod() == 'POST')
         {
             $form->bindRequest($request);
+            
             $em = $this->getDoctrine()->getEntityManager();
             
             if($form->isValid())
-            {                
-                $em->persist($form->getData());
+            {
+                $em->persist($programme);
                 $em->flush();
                 
-                return $this->redirect($this->generateUrl('gerer_film'));
+                return $this->redirect($this->generateUrl('gerer_programme'));
             }
         }
         
-        return $this->render('CpAdminBundle:Film:edit.twig.tpl', array(
+        return $this->render('CpAdminBundle:Programme:edit.twig.tpl', array(
             'form' => $form->createView(),
         ));
     }
@@ -97,17 +98,17 @@ class FilmController extends Controller {
     public function supprimerAction($id)
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $film = $em->getRepository('CpFilmBundle:Film')->find($id);
+        $programme = $em->getRepository('CpProgrammeBundle:Programme')->find($id);
         
-        if(!$film)
+        if(!$programme)
         {
-            $this->createNotFoundException("Ce film n'existe pas.");
+            $this->createNotFoundException();
         }
         
-        $em->remove($film);
+        $em->remove($programme);
         $em->flush();
         
-        return $this->redirect($this->generateUrl('gerer_film'));
+        return $this->redirect($this->generateUrl('gerer_programme'));
     }
 }
 

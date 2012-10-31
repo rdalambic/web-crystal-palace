@@ -1,3 +1,3 @@
 CpSeanceBundle_homepage:
-    pattern:  /hello/{name}
+    pattern:  /seances
     defaults: { _controller: CpSeanceBundle:Default:index }

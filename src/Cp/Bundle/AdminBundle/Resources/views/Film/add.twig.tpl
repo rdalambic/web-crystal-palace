@@ -5,6 +5,7 @@
 {% block content %}
 <h1>Ajouter un film</h1>
 <br />
+{{ form_errors(form) }}
 <div class="form-container">
     <form action="#" method="post" {{ form_enctype(form) }} >
         <fieldset>
@@ -15,6 +16,16 @@
             <div><label>Durée</label> {{ form_widget(form.duree_h) }}h{{ form_widget(form.duree_m) }}</div>
             <div><label>Version</label> {{ form_widget(form.version) }}</div>
         </fieldset>
+        <fieldset>
+            <legend>Affiche</legend>
+            <div><label>Url de l'affiche</label> {{ form_widget(form.affiche) }}</div>
+        </fieldset>
+        <fieldset>
+            <legend>Pages</legend>
+            <div><label>Synopsis</label> {{ form_widget(form.resume) }}</div>
+            <div><label>Fiche du film</label> {{ form_widget(form.fiche) }}</div>
+        </fieldset>
+            {{ form_rest(form) }}
         <input type="submit" />
     </form>
 </div>

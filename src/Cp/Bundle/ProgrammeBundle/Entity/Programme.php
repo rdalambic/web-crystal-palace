@@ -78,6 +78,6 @@ class Programme
      */
     public function getDate()
     {
-        return $this->date->format('d/m/Y');
+        return $this->date;
     }
 }

@@ -27,7 +27,7 @@
         <tr>
             <td>{{ f.id }}</td>
             <td>{{ f.titre }}</td>
-            <td><a href="{{ path('editer_film', { id = f.id }) }}">Editer</a> - Supprimer</td>
+            <td><a href="{{ path('editer_film', { id:f.id }) }}">Editer</a> - <a href="{{ path('supprimer_film', { id:f.id }) }}"><img src="{{ asset('/img/cross.png') }}" alt="Supprimer" /></a></td>
         </tr>
         {% endfor %}
     </tbody>

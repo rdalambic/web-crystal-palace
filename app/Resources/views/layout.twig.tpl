@@ -33,6 +33,11 @@
                             <li><a href="{{ path('programme_cette_semaine') }}">Programme</a></li>
                             <li><a href="horaires.html">Horaires</a></li>
                             <li><a href="tarifs.html">Tarifs</a></li>
+                            <li><a href="">Classic Crystal</a></li>
+                            <li><a href="">Cin'espiègle</a></li>
+                            <li><a href="">Documentaires</a></li>
+                            <li><a href="">Amis du Cinéma</a></li>
+                            <li><a href="">Scolaires</a></li>
                         </ul>
                     </div>                    
                 </div>

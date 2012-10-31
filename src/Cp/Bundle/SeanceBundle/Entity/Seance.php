@@ -46,6 +46,7 @@ class Seance
      * @ORM\JoinColumn(nullable=false)
      */
     private $programme;
+    
 
      /**
      * Get id
