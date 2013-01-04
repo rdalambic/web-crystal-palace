@@ -41,6 +41,13 @@ class Actu
      * @ORM\Column(name="contenu", type="text")
      */
     private $contenu;
+    
+    /**
+     * @var integer $affichage;
+     * 
+     * @ORM\Column(name="affichage", type="integer") 
+     */
+    private $affichage;
 
 
     /**
@@ -111,5 +118,25 @@ class Actu
     public function getContenu()
     {
         return $this->contenu;
+    }
+
+    /**
+     * Set affichage
+     *
+     * @param integer $affichage
+     */
+    public function setAffichage($affichage)
+    {
+        $this->affichage = $affichage;
+    }
+
+    /**
+     * Get affichage
+     *
+     * @return integer 
+     */
+    public function getAffichage()
+    {
+        return $this->affichage;
     }
 }

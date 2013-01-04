@@ -324,7 +324,7 @@ h3
 
 #news h1
 {
-    background: url("http://placehold.it/659x57&text=Actualités") no-repeat scroll left top #FFF;
+   /* background: url("http://placehold.it/659x57&text=Actualités") no-repeat scroll left top #FFF;*/
     color: #FFF;
     display: block;
     font-size: 11px;

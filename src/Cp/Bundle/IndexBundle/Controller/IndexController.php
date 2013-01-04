@@ -11,7 +11,7 @@ class IndexController extends Controller {
         $date = $this->get('core.sql_date')->frUs($wed);
 
         $programme = $this->getDoctrine()->getEntityManager()->getRepository('CpProgrammeBundle:Programme')->findOneByDate(new \DateTime($date));
-        $actus = $this->getDoctrine()->getEntityManager()->getRepository('CpActuBundle:Actu')->findAll();
+        $actus = $this->getDoctrine()->getEntityManager()->getRepository('CpActuBundle:Actu')->findByAffichage(0);
 
         return $this->render('CpIndexBundle:Index:index.twig.tpl', array(
                     'programme' => $programme,

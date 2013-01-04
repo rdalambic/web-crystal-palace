@@ -30,11 +30,11 @@
 {% endif %}
 
     <div id="news">
-        <!--<h1>Acutalités</h1>-->
+       <!--<h1>Acutalités</h1>-->
         <div id="news-container">
         {% for a in actus %}
                 <div class="news-box" id="n{{ a.id }}">
-                    <h2 class="news-titre">{{ a.titre }}</h2>
+                    <h3 class="news-titre">{{ a.titre }}</h3>
                     <div class="news-contenu">
                     {{ a.contenu }}
                         </div>

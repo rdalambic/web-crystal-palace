@@ -48,3 +48,23 @@ supprimer_programme:
     defaults: { _controller: CpAdminBundle:Programme:supprimer }
     requirements:
       id: \d+
+
+gerer_actu:
+    pattern: /admin/actus
+    defaults: { _controller: CpAdminBundle:Actu:index }
+    
+ajouter_actu:
+    pattern: /admin/ajouter-actu
+    defaults: { _controller: CpAdminBundle:Actu:ajouter }
+    
+editer_actu:
+    pattern: /admin/editer-actu-{id}
+    defaults: { _controller: CpAdminBundle:Actu:editer }
+    requirements:
+      id: \d+
+      
+supprimer_actu:
+    pattern: /admin/supprimer-actu-{id}
+    defaults: { _controller: CpAdminBundle:Actu:supprimer }
+    requirements:
+      id: \d+
