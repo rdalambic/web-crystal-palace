@@ -160,16 +160,28 @@ h3
     color: #000;
 }
 
-#content h1, #content h2
+#content h1
 {
-    height: 30px;
-    width: 660px;
+    height: 43px;
+    width: 652px;
     background-image: url("../img/title_back.png");
     background-repeat: no-repeat;
     margin-left: 5px;
-    text-indent: 60px;
-    padding-top: 6px;
+    text-indent: 71px;
+    padding-top: 12px;
 }
+
+#content h2
+{
+    height: 28px;
+    width: 653px;
+    background-image: url("../img/title_line.png");
+    background-repeat: no-repeat;
+    margin-left: 5px;
+    text-indent: 31px;
+    padding-top: 7px;
+}
+
 
 
 
@@ -182,6 +194,7 @@ h3
    position: relative;
    top: 0;
    background: url("../img/banner.png") no-repeat scroll left top transparent;
+   margin-bottom: 40px;
 }
 
 #logo
@@ -229,20 +242,22 @@ h3
 
 #footer
 {
-    height: 60px;
+    height: 95px;
     display: block;
+    background-image: url('../img/bottom_gradient.png');
+    background-repeat: repeat-x;
+    background-position: bottom;
     font-style: normal;
     margin: 15px 0 0;
-    padding: 0 0 10px;
+    padding: 0 0 10px;    
     text-align: center;
     width: 978px;
-    color: #949494;
 }
 
-#footer a
+#footer a, #footer a:visited
 {
     text-decoration: none;
-    color: #949494;
+    color: #000;
 }
 
 #footer a:hover
@@ -252,7 +267,7 @@ h3
 
 #flinks
 {
-    line-height: 16px;
+    line-height: 85px;
     margin: 15px 0 0;
     padding: 0;
 }
@@ -269,13 +284,17 @@ h3
     clear: both;
 }
 
+.clear_left{
+    clear: left;
+}
+
 #film-box
 {
     display: inline;
     float: left;
     height: 195px;
     width: 660px;
-    margin: 0 0 5px 5px;
+    margin: 0 0 20px 5px;
     position: relative;
     text-align: right;   
     background-image: url("../img/back_prog.png");
@@ -308,45 +327,9 @@ h3
     color: #f1df17;
 }
 
-#news
+.news-contenu
 {
-    border-style: solid;
-    border-width: 1px;
-    display: inline;
-    float: left;
-    font-size: 12px;
-    margin: 0 0 0 5px;
-    padding: 10px 0 5px 2px;
-    width: 658px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-}
-
-#news h1
-{
-   /* background: url("http://placehold.it/659x57&text=Actualités") no-repeat scroll left top #FFF;*/
-    color: #FFF;
-    display: block;
-    font-size: 11px;
-    height: 57px;
-    left: -1px;
-    line-height: 57px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    text-align: right;
-    top: -1px;
-    width: 660px;
-}
-
-#adtop
-{
-    clear: both;
-    height: auto;
-    margin: 0 auto;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    text-align: center;
+    margin-left: 24px;
 }
 
 #rightbar
@@ -402,4 +385,12 @@ h3
 {
     width: 110px;
     height: 145px;
+}
+
+#intro
+{
+    text-align: justify;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    width: 651px;
 }

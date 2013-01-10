@@ -40,11 +40,7 @@
                             <li><a href="">Scolaires</a></li>
                         </ul>
                     </div>                    
-                </div>
-                
-                <div id="adtop">
-                        <img src="http://placehold.it/728x90&text=Pub 728x90" />
-                </div>
+                </div>           
                 
                 <div id="rightbar">
                     <div id="adside" style="text-align: center;">

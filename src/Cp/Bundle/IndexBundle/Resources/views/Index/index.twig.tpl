@@ -26,22 +26,24 @@
         </div>
     </div>
 {% else %}
-<p>Désolé, aucun programme pour le moment...</p>
+    <p>Désolé, aucun programme pour le moment...</p>
 {% endif %}
-
-    <div id="news">
-       <!--<h1>Acutalités</h1>-->
-        <div id="news-container">
+    
+    <div class="clear_left"></div>
+    
+    <h1>Acutalités</h1>
+    <p id="intro">Bienvenue sur le site du cinéma Crystal Palace à La Charité sur Loire. Vous pouvez retrouver vos programmes et évenemments de votre cinéma préféré directement sur ce site. Bonne visite !</p>
+    <div id="news-container">
         {% for a in actus %}
-                <div class="news-box" id="n{{ a.id }}">
-                    <h3 class="news-titre">{{ a.titre }}</h3>
-                    <div class="news-contenu">
+            <div class="news-box" id="n{{ a.id }}">
+                <h2 class="news-titre">{{ a.titre }}</h2>
+                <div class="news-contenu">
                     {{ a.contenu }}
-                        </div>
                     </div>
-            {% else %}
-                    <p>Aucune actu en ce moment.</p>
-        {% endfor %}
                 </div>
+            {% else %}
+                <p>Aucune actu en ce moment.</p>
+        {% endfor %}
             </div>
+
 {% endblock %}
