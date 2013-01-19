@@ -43,7 +43,7 @@ class Seance
     
     /**
      * @ORM\ManyToOne(targetEntity="Cp\Bundle\ProgrammeBundle\Entity\Programme")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $programme;
     

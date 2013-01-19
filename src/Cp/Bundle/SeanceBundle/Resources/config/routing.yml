@@ -1,3 +1,3 @@
 CpSeanceBundle_homepage:
-    pattern:  /seances
-    defaults: { _controller: CpSeanceBundle:Default:index }
+    pattern:  /horaires
+    defaults: { _controller: CpSeanceBundle:Horaires:planning }
