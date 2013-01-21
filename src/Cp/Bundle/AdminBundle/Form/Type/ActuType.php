@@ -19,7 +19,11 @@ class ActuType extends AbstractType {
     {
         $builder
         ->add('titre')
-        ->add('contenu')
+        ->add('contenu', 'textarea', array(
+            'attr' => array(
+                'class' => 'tinymce',
+            ),
+        ))
         ->add('affichage', 'choice', array(
             'choices' => array(
                 '0' => "Page d'accueil", '1' => "AMC",

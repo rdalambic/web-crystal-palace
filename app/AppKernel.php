@@ -25,6 +25,8 @@ class AppKernel extends Kernel
             new Cp\Bundle\AdminBundle\CpAdminBundle(),
             new Cp\Bundle\ContactBundle\CpContactBundle(),
             new Cp\Bundle\SeanceBundle\CpSeanceBundle(),
+            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
+            new Cp\Bundle\StaticBundle\CpStaticBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {            

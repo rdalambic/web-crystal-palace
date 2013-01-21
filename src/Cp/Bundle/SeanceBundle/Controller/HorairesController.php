@@ -63,8 +63,7 @@ class HorairesController extends Controller {
 
         }
 
-
-            print_r($filmsToShows);
+           
             return $this->render('CpSeanceBundle:Horaires:planning.twig.tpl', array(
                         'weekdays' => $weekdays,
                         'programme' => $programme,

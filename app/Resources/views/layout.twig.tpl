@@ -31,7 +31,7 @@
                         <ul>
                             <li><a href="{{ path('homepage') }}">Accueil</a></li>
                             <li><a href="{{ path('programme_cette_semaine') }}">Programme</a></li>
-                            <li><a href="horaires.html">Horaires</a></li>
+                            <li><a href="{{ path('horaires_planning') }}">Horaires</a></li>
                             <li><a href="tarifs.html">Tarifs</a></li>
                             <li><a href="">Classic Crystal</a></li>
                             <li><a href="">Cin'espiègle</a></li>

@@ -30,7 +30,7 @@
         <tr>
             <td>{{ n.id }}</td>
             <td>{{ n.titre }}</td>
-            <td>{{ n.date|date('d/m/Y') }}</td>
+            <td>{{ n.date }}</td>
             <td><a href="{{ path('editer_actu', {id: n.id}) }}">Editer</a> - <a href=""><img src="{{ asset('/img/cross.png') }}" alt="Supprimer" /></a></td>
         </tr>        
         {% endfor %}

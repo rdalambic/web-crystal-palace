@@ -24,4 +24,5 @@
             <input type="submit" value="Poster l'actu" />
     </form>
 </div>
+{{ tinymce_init() }}
 {% endblock %}

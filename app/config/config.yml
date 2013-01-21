@@ -58,3 +58,11 @@ swiftmailer:
 jms_security_extra:
     secure_controllers:  true
     secure_all_services: false
+    
+# Tinymce configuration
+stfalcon_tinymce:
+    # include_jquery: true
+    tinymce_jquery: true
+    textarea_class: tinymce
+    language: %locale%
+    

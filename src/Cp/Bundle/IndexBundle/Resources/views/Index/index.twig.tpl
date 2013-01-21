@@ -38,7 +38,7 @@
             <div class="news-box" id="n{{ a.id }}">
                 <h2 class="news-titre">{{ a.titre }}</h2>
                 <div class="news-contenu">
-                    {{ a.contenu }}
+                    {{ a.contenu|raw }}
                     </div>
                 </div>
             {% else %}
