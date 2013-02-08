@@ -1,27 +1,44 @@
 {% extends "::layout.twig.tpl" %}
 
-{% block titrepage %}Ajout d'un programme{% endblock %}
+{% block titrepage %}Liste des pages statiques{% endblock %}
 
 {% block content %}
-<h1>Ajout d'un nouveau programme</h1>
-<br />
-<div class="form-container">
-    {{ form_errors(form) }}
-    <form action="#" method="post" {{ form_enctype(form) }} >
-        <fieldset>
-            <legend>Date</legend>
-            <div>{{ form_label(form.date, "Date de début du programme (mercredi)") }} : {{ form_widget(form.date) }}</div>
-        </fieldset>
-        <fieldset>
-            <legend>Films</legend>
-            <div>{{ form_widget(form.films) }}</div>
-        </fieldset>
+<select>
+    <option disabled="true" selected="selected">Sélectionnez une page</option>
+    {% for p in pages %}
+    <option value="{{ p.id }}">{{ p.title }}</option>
+    {% endfor %}
+</select>
 
-        <div class="buttonrow">
-            <input type="submit" value="Ajouter le programme" class="button" />
-        </div>
+<div id="page_edit">
+</div>
 
-            {{ form_rest(form) }}
-    </form>
-</div>    
+{% endblock %}
+
+{% block javascript_bottom %}    
+<script type="text/javascript">
+    $(function(){
+        $('select').change(function(){            
+            var pageId = $(this).children(':selected').val();            
+            $.ajax({
+                type : 'GET',
+                url : 'pages/edit-' + pageId,
+                dataType : 'html',
+                success : function(code_html){
+                    $('#page_edit').html(code_html);
+                },
+            });
+        });
+        
+        
+    });
+    
+    function savePage()
+    {
+        var pageContent = $('textarea').val();        
+        $.post('pages/save', { id: $('select').children(':selected').val(), content: pageContent }).done(function(data){
+            $(location).attr('href', '{{ path('admin_homepage') }}');
+        });
+    }       
+    </script>
 {% endblock %}

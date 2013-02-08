@@ -68,3 +68,17 @@ supprimer_actu:
     defaults: { _controller: CpAdminBundle:Actu:supprimer }
     requirements:
       id: \d+
+
+liste_pages:
+    pattern: /admin/pages
+    defaults: { _controller: CpAdminBundle:Static:index }
+
+ajax_edit:
+    pattern: /admin/pages/edit-{id}
+    defaults: { _controller: CpAdminBundle:Static:edit }
+    requirements:
+      id: \d+
+
+ajax_save:
+    pattern: /admin/pages/save
+    defaults: { _controller: CpAdminBundle:Static:save }

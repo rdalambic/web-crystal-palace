@@ -8,8 +8,18 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     
-    public function indexAction($name)
+    public function indexAction($slug)
     {
-        return $this->render('CpStaticBundle:Default:index.html.twig', array('name' => $name));
+        $page = $this->getDoctrine()->getEntityManager()->getRepository('CpStaticBundle:Page')->findOneBySlug($slug);
+        
+        if(!$page)
+        {
+            throw $this->createNotFoundException('Page non trouvée');
+        }
+        
+        return $this->render('CpStaticBundle:Default:page.twig.tpl', array(
+            'content' => $page->getContent(),
+            'title' => $page->getTitle(),
+        ));
     }
 }
