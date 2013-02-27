@@ -8,7 +8,7 @@ security:
     providers:
         in_memory:
             users:
-                admin: { password: pass, roles: [ 'ROLE_ADMIN' ] }
+                admin: { password: $et648Cg$, roles: [ 'ROLE_ADMIN' ] }
 
     firewalls:
           secured_area:
