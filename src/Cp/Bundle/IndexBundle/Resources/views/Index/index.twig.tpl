@@ -31,8 +31,8 @@
     
     <div class="clear_left"></div>
     
-    <h1>Acutalités</h1>
-    <p id="intro">Bienvenue sur le site du cinéma Crystal Palace à La Charité sur Loire. Vous pouvez retrouver vos programmes et évenemments de votre cinéma préféré directement sur ce site. Bonne visite !</p>
+    <h1>Actualités</h1>
+    <p id="intro">Bienvenue sur le site du cinéma Crystal Palace à La Charité sur Loire. Vous pouvez retrouver les programmes et évenemments de votre cinéma préféré directement sur ce site. Bonne visite !</p>
     <div id="news-container">
         {% for a in actus %}
             <div class="news-box" id="n{{ a.id }}">
