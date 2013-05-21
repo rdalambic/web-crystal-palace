@@ -27,7 +27,7 @@
         <tr>
             <td>{{ p.id }}</td>
             <td>{{ p.date|date("d/m/Y") }}</td>
-            <td><a href="{{ path('editer_programme', { id:p.id }) }}">Editer</a> - <a href="{{ path('supprimer_programme', { id:p.id }) }}">Supprimer</a></td>
+            <td><a href="{{ path('editer_horaires', { id:p.id }) }}">Horaires</a> - <a href="{{ path('editer_programme', { id:p.id }) }}">Editer</a> - <a href="{{ path('supprimer_programme', { id:p.id }) }}">Supprimer</a></td>
         </tr>
         {% endfor %}
     </tbody>

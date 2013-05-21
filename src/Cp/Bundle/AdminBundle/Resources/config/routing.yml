@@ -82,3 +82,17 @@ ajax_edit:
 ajax_save:
     pattern: /admin/pages/save
     defaults: { _controller: CpAdminBundle:Static:save }
+    
+ajax_add_horaire:
+    pattern: /admin/horaires/add
+    defaults: { _controller: CpAdminBundle:Programme:addShow }
+    
+ajax_del_horaire:
+    pattern: /admin/horaires/del
+    defaults: { _controller: CpAdminBundle:Programme:delShow }
+    
+editer_horaires:
+     pattern: /admin/horaires-programme-{id}
+     defaults: { _controller: CpAdminBundle:Programme:ajouterHoraires }
+     requirements:
+       id: \d+

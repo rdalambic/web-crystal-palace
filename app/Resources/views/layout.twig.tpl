@@ -8,12 +8,15 @@
         {% endblock %}
 
         {% block stylesheet %}        
-        <link rel="stylesheet" href="{{ asset('/css/style.css') }}" media="screen" />        
+        <link rel="stylesheet" href="{{ asset('/css/style.css') }}" media="screen" />
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
         {% endblock %}
 
         {% block javascript_head %}
-        <script type="text/javascript" src="http://static.rdalambic.com/rdweb/js/jquery/jquery.min.js"></script>        
+        <script type="text/javascript" src="http://static.rdalambic.com/rdweb/js/jquery/jquery.min.js"></script>
         <script type="text/javascript" src="http://static.rdalambic.com/rdweb/js/caroufredsel/caroufredsel.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="{{ asset('/js/jquery-ui-timepicker.js') }}"></script>
         <script type="text/javascript" src="script/uiDynamic.js"></script>
         <script type="text/javascript" src="script/tiny_mce/tiny_mce.js"></script>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
