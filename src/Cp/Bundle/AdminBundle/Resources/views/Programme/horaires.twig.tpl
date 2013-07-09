@@ -93,7 +93,7 @@ function addShow(id)
                 <td>{{ f.film.titre }}</td>
                 <td id="td-shows-{{ f.film.id }}">
                     {% for s in f.shows %}
-                        <a href="javascript:deleteShow({{ s.id }});" id="s{{ s.id }}">{{ s.date|date("d/m/Y - H:m") }} ({{ s.salle }})</a> <br />
+                        <a href="javascript:deleteShow({{ s.id }});" id="s{{ s.id }}">{{ s.date|date("d/m/Y - H:i") }} ({{ s.salle }})</a> <br />
                         {% else %}
                         N/A
                     {% endfor %}
